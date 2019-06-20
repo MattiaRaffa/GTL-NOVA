@@ -23,10 +23,10 @@ from shape_functions import *
 fnt_path = os.getcwd() + "/project.ufo"
 
 # Absolute path of folder containing glyphs'txts
-txt_path = os.getcwd() + "/assets/txt-letters/liberta/roman/Letter/Lowercase"
+txt_path = os.getcwd() + "/assets/txt-quarti"
 
 # Set glyphs'baseline row (counting from bottom of txt)
-gly_baseline = 2
+gly_baseline = 0
 
 # Set the ratio between width of "pixelone" and its height:
 # width_ratio = 2 means the module width will be twice its height
@@ -229,14 +229,7 @@ sintassi = {
     # Do nothing
     ".": (do_nothing, p_do_nothing),
     # Main structure
-    "#": (symbol_list, p_symbol_list),
-    # Serifs
-    "@": (do_nothing, p_do_nothing),
-    # Corners
-    "%": (ellipse_quarter, p_ellipse_quarter_NW),
-    "&": (ellipse_quarter, p_ellipse_quarter_NE),
-    "+": (ellipse_quarter, p_ellipse_quarter_SW),
-    "$": (ellipse_quarter, p_ellipse_quarter_SE)
+    "#": (random_function, p_random_function),
 }
 
 
