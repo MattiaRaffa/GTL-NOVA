@@ -1,4 +1,4 @@
-# Libreria Generatore Tipografico di Libertà*
+# Libreria Generatore Tipografico di Libertà* × NOVA
 #### *richiede Robofont 1.8.x
 ***
 
