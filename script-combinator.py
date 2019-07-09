@@ -12,9 +12,6 @@ QUARTERS = ["0", "1", "2", "3"]
 
 ### VARIABLES
 
-# Absolute path of project font
-fnt_path = os.getcwd() + "/project.ufo"
-
 # Number of combinations to generate
 cmb_num = 10
 
@@ -30,7 +27,7 @@ characters = string.ascii_uppercase + string.ascii_lowercase
 
 
 ### INSTRUCTIONS
-fnt = OpenFont(fnt_path)
+fnt = CurrentFont()
 
 
 
