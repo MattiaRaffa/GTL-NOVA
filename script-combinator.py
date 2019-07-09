@@ -22,7 +22,6 @@ gly_mrg = 50
 
 ### SYSTEM VARIABLES
 separator = "|"
-characters = string.ascii_uppercase + string.ascii_lowercase
 
 
 
@@ -110,7 +109,7 @@ for i, cmb in enumerate(random.sample(cmb_data, cmb_num)):
     
     # Creating new glyph
     #cmb_name = "G-" + "".join(qrt_lst)
-    cmb_name = characters[i]
+    cmb_name = "cmb" + str(i).zfill(len(str(len(cmb_data))))
     cmb_gly = fnt.newGlyph(cmb_name, clear=True)
     
     # Getting glyph pen
@@ -127,6 +126,3 @@ for i, cmb in enumerate(random.sample(cmb_data, cmb_num)):
     cmb_gly.width = abs(cmb_gly.box[0]-cmb_gly.box[2])
     cmb_gly.leftMargin = gly_mrg
     cmb_gly.rightMargin = gly_mrg
-            
-    
-    
