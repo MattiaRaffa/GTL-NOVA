@@ -12,6 +12,9 @@ QUARTERS = ["0", "1", "2", "3"]
 
 ### VARIABLES
 
+# Number of starting combination
+cmb_str = 10
+
 # Number of combinations to generate
 cmb_num = 10
 
@@ -102,14 +105,14 @@ Generating combinations
 assert cmb_num<len(cmb_data), "The number of available combinations is %d. You choose too many to generate!" % len(cmb_data)
 
 # "Iterating over a list of %d randomly selected combinations" % cmb_num
-for i, cmb in enumerate(random.sample(cmb_data, cmb_num)):
+for cmb in cmb_data[cmb_str:cmb_str+cmb_num]:
 
     # Getting quarters/glyphs names
     qrt_lst = cmb.split(separator)
     
     # Creating new glyph
     #cmb_name = "G-" + "".join(qrt_lst)
-    cmb_name = "cmb" + str(i).zfill(len(str(len(cmb_data))))
+    cmb_name = "cmb" + str(cmb_data.index(cmb)).zfill(len(str(len(cmb_data))))
     cmb_gly = fnt.newGlyph(cmb_name, clear=True)
     
     # Getting glyph pen
